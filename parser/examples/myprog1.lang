@@ -1,0 +1,19 @@
+program
+int s[5];
+s[0]:=1;
+x:=0;
+if (x>2) 
+then 
+	if (a=1) 
+	then 
+		i=0; 
+	else 
+		i=1; 
+	fi; 
+	s:=5;
+	d:=1;
+else 
+	a:=2; 
+fi;
+C:=(x+b)*2;
+end

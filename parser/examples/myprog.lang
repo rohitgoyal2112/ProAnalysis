@@ -1,0 +1,11 @@
+program
+int s[5];
+s[0]:=1;
+x:=0;
+if (x>2) 
+then a:=1; 
+s:=5;
+d:=1;
+else a:=2; fi;
+C:=(x+b)*2;
+end

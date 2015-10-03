@@ -1,0 +1,45 @@
+import java.util.Arrays;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import org.antlr.v4.runtime.ANTLRInputStream;
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.TokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.gui.TreeViewer;
+
+/**
+ * A simple demo to show AST GUI with ANTLR
+ * @see http://www.antlr.org/api/Java/org/antlr/v4/runtime/tree/gui/TreeViewer.html
+ * 
+ * @author wangdq
+ * 2014-5-24
+ *
+ */
+public class HelloTestDrive {
+    public static void main(String[] args) {
+        //prepare token stream
+        CharStream stream = new ANTLRInputStream("hello antlr");
+       
+        TheLangLexer lex = new TheLangLexer(stream);
+    CommonTokenStream tokens = new CommonTokenStream(lex);
+    TheLangParser parser = new TheLangParser(tokens);
+        ParseTree tree = parser.program(); 
+
+        //show AST in console
+        System.out.println(tree.toStringTree(parser));
+
+        //show AST in GUI
+        JFrame frame = new JFrame("Antlr AST");
+        JPanel panel = new JPanel();
+        TreeViewer viewr = new TreeViewer(Arrays.asList(
+                parser.getRuleNames()),tree);
+        viewr.setScale(1.5);//scale a little
+        panel.add(viewr);
+        frame.add(panel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(200,200);
+        frame.setVisible(true);
+    }
+}

@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin
+END
+TheLangParser$assignStmt_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$assignStmt_return.class
+END
+TheLang.tokens
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLang.tokens
+END
+TheLangLexer.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangLexer.class
+END
+TheLangParser$aexpr1_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$aexpr1_return.class
+END
+TheLangParser$opr_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$opr_return.class
+END
+TheLangParser$bexpr1_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$bexpr1_return.class
+END
+TheLangParser$aexpr2_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$aexpr2_return.class
+END
+Main.class
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/Main.class
+END
+TheLangParser$bexpr2_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$bexpr2_return.class
+END
+TheLangParser$aexpr3_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$aexpr3_return.class
+END
+TheLangParser$writeStmt_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$writeStmt_return.class
+END
+TheLangLexer$DFA5.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangLexer$DFA5.class
+END
+TheLangParser$ifStmt_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$ifStmt_return.class
+END
+TheLangParser$decl_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$decl_return.class
+END
+TheLangParser$level_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$level_return.class
+END
+TheLangParser$program_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$program_return.class
+END
+TheLangParser.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser.class
+END
+TheLangParser$skipStmt_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$skipStmt_return.class
+END
+TheLangParser$aexpr_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$aexpr_return.class
+END
+TheLangParser$bexpr_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$bexpr_return.class
+END
+TheLang.g
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLang.g
+END
+TheLangParser$whileStmt_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$whileStmt_return.class
+END
+TheLangParser$readStmt_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$readStmt_return.class
+END
+TheLangParser$stmt_return.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repositories/LBT/!svn/ver/9943/LBT/teaching/2015/02242/parser/bin/TheLangParser$stmt_return.class
+END
