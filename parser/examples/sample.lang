@@ -6,6 +6,10 @@ int z;
 a:=10;
 x := a+b;
 while (a < 15) (* Comment here *) do
+j:=5;
+while (j<10) do
+j++;
+od
 a := a+1;
 od
 write(a); 

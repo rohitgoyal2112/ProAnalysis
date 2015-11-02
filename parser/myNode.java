@@ -15,4 +15,5 @@ public class myNode{
 		EdgesIn= new ArrayList<myNode>();
 		EdgesOut=new ArrayList<myNode>();
 	}
+
 }

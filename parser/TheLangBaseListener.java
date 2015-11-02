@@ -12,13 +12,14 @@ import java.util.*;
  * of the available methods.
  */
 public class TheLangBaseListener implements TheLangListener {
-	int label=0;
+	int label=1;
 	List<myNode> lastNodes;
 	myNode tempLastNode;
 	List<myNode> allNodes;
 	List<Integer> allLabels;
 	List<String> allEdges;
 	Stack<myNode> condStack;
+	Stack<myNode> whileCondStack;
 	int state;
 	/**
 	 * {@inheritDoc}
@@ -30,8 +31,8 @@ public class TheLangBaseListener implements TheLangListener {
 		allLabels=new ArrayList<Integer>();
 		allNodes=new ArrayList<myNode>();
 		allEdges=new ArrayList<String>();
-		condStack=new Stack<myNode>();
-		//1 for if, 2 for else, 0 otherwise
+		condStack=new Stack<myNode>(); //1 for if, 2 for else, 0 otherwise
+		whileCondStack=new Stack<myNode>();
 		state=0;
 
 	}
@@ -239,7 +240,6 @@ public class TheLangBaseListener implements TheLangListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void enterIfStmt(TheLangParser.IfStmtContext ctx) { 
-		System.out.println("rohit");
 		state=1;
 		myNode node= new myNode(label++,(ParserRuleContext)ctx.getChild(1));
 		allNodes.add(node);
@@ -271,7 +271,22 @@ public class TheLangBaseListener implements TheLangListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWhileStmt(TheLangParser.WhileStmtContext ctx) { }
+	@Override public void enterWhileStmt(TheLangParser.WhileStmtContext ctx) { 
+		myNode node= new myNode(label++,(ParserRuleContext)ctx.getChild(1));
+		allNodes.add(node);
+		allLabels.add(label);
+		if(lastNodes.size()>0) {
+			for(int i =0;i<=lastNodes.size()-1;i++){
+				lastNodes.get(i).EdgesOut.add(node);
+				node.EdgesIn.add(lastNodes.get(i));
+				allEdges.add(lastNodes.get(i).label+"->"+node.label);
+			}
+			lastNodes.clear();
+		}
+		
+		lastNodes.add(node);
+		whileCondStack.push(node);
+	}
 	/**
 	 * {@inheritDoc}
 	 *
@@ -291,11 +306,11 @@ public class TheLangBaseListener implements TheLangListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitProgram(TheLangParser.ProgramContext ctx) {
-				System.out.println("label definitions: ");
+				System.out.println("Label definitions: ");
 				for(int i=0;i<=allNodes.size()-1;i++){
 					System.out.println("Label "+ allNodes.get(i).label+"  "+ allNodes.get(i).childTree.getText());
 				} 
-				System.out.println(allLabels);
+				System.out.println("Flow Graph: ");
 				System.out.println(allEdges);
 
 	}
@@ -320,13 +335,11 @@ public class TheLangBaseListener implements TheLangListener {
 	@Override public void visitTerminal(TerminalNode node) {
 		int token=  node.getSymbol().getType();
 		if(token==25){//else
-			System.out.println("else");
 			state=2;
 			lastNodes.add(tempLastNode);
 			tempLastNode=condStack.pop();
 		}
 		else if(token==26){//fi
-			System.out.println("fi");
 			if(condStack.size()>0){
 				state=1;
 				lastNodes.add(tempLastNode);
@@ -339,9 +352,20 @@ public class TheLangBaseListener implements TheLangListener {
 				tempLastNode=null;
 			}
 		}
+		// token od
+		else if(token==29){
+			myNode tempNode=whileCondStack.pop();
+			if(lastNodes.size()>0) {
+			for(int i =0;i<=lastNodes.size()-1;i++){
+				lastNodes.get(i).EdgesOut.add(tempNode);
+				tempNode.EdgesIn.add(lastNodes.get(i));
+				allEdges.add(lastNodes.get(i).label+"->"+tempNode.label);
+			}
+			lastNodes.clear();
+			lastNodes.add(tempNode);
+		}
 
-			
-
+		}	
 	}
 	/**
 	 * {@inheritDoc}
